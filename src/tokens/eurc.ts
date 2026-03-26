@@ -1,7 +1,7 @@
 import tokenIcon from '../img/eurc.webp';
-import { Asset } from '../types';
+import { RegistryAsset } from '../types';
 
-export const asset: Asset = {
+export const asset: RegistryAsset = {
     id: "eurc",
     name: "EUR Coin",
     symbol: "EURC",

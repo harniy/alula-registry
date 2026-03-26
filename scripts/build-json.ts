@@ -56,14 +56,14 @@ function buildRegistryAsset(filePath: string): RegistryAsset & {
         name: getStringProperty(assetBody, 'name', filePath),
         symbol: getStringProperty(assetBody, 'symbol', filePath),
         token_address: getStringProperty(assetBody, 'token_address', filePath),
-        icon: registryBaseUrl ? `${registryBaseUrl}/img/${iconFileName}` : `./img/${iconFileName}`,
+        icon: registryBaseUrl ? `${registryBaseUrl}/img/${iconFileName}` : `/img/${iconFileName}`,
         iconFileName,
         iconSourcePath
     }
 }
 
 function getAssetBody(source: string, filePath: string): string {
-    const assetMatch = source.match(/export const asset\s*:\s*Asset\s*=\s*\{([\s\S]*?)\n\}/)
+    const assetMatch = source.match(/export const asset\s*(?::\s*[^=]+)?=\s*\{([\s\S]*?)\n\}/)
 
     if (!assetMatch) {
         throw new Error(`Unable to locate asset object in ${path.relative(projectRoot, filePath)}`)

@@ -1,7 +1,7 @@
 import tokenIcon from '../img/aqua.webp';
-import { Asset } from '../types';
+import { RegistryAsset } from '../types';
 
-export const asset: Asset = {
+export const asset: RegistryAsset = {
     id: "aqua",
     name: "AQUA",
     symbol: "AQUA",

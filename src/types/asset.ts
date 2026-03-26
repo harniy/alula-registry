@@ -1,4 +1,4 @@
-export type Asset = {
+export type RegistryAsset = {
     id: string;
     name: string;
     symbol: string;
